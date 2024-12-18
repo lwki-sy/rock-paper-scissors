@@ -7,7 +7,20 @@
 </head>
 <body>
     <script>
-        console.log("Hello World");
+
+    function getComputerChoice(max){
+        const computerChoice= Math.floor(Math.random() * max);
+                if(computerChoice == 2 ){
+                    return "Rock"; }
+                else if (computerChoice == 1){
+                    return "Paper";
+                } else { 
+                    return "Scissors";
+            }
+        };
+    console.log(getComputerChoice(3)); 
+
+
     </script>
     
 </body>
