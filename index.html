@@ -18,8 +18,20 @@
                     return "Scissors";
             }
         };
-    console.log(getComputerChoice(3)); 
-
+//console.log(getComputerChoice(3)); 
+        function getHumanChoice(){
+            let humanChoice = window.prompt("Rock Paper Scissors (Case Sensitive!)").trim();
+           // humanChoice = humanChoice.charAt(0).toUpperCase + humanChoice.slice(1).toLowercase;
+        if (humanChoice === "Rock" || humanChoice === "Paper" || humanChoice === "Scissors"){
+            console.log("You chose: " + humanChoice);
+            return humanChoice;
+        } else {
+            console.log("Invalid input. Please try again.");
+            return getHumanChoice(); 
+        }
+        }
+            
+        getHumanChoice();
 
     </script>
     
