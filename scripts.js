@@ -11,7 +11,21 @@ function getComputerChoice(){
 
     console.log(computerChoice);
 }
+
 getComputerChoice();
+
+
+function getHumanChoice(){
+    humanChoice = prompt("Rock, Paper or Scissors?");
+    humanChoice = humanChoice.trim().toLowerCase();
+    humanChoice = humanChoice.charAt(0).toUpperCase() + humanChoice.slice(1);
+
+    return humanChoice;
+
+}
+let choice = getHumanChoice();
+console.log("You picked: " + choice);
+
 
 
 
