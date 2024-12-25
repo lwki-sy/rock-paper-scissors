@@ -11,11 +11,11 @@
     function getComputerChoice(max){
         const computerChoice= Math.floor(Math.random() * max);
                 if(computerChoice == 2 ){
-                    return "Rock"; }
+                    return "rock"; }
                 else if (computerChoice == 1){
-                    return "Paper";
+                    return "paper";
                 } else { 
-                    return "Scissors";
+                    return "scissors";
             }
         };
         //console.log(getComputerChoice(3)); 
@@ -28,20 +28,33 @@
             console.log("You chose " + humanChoice);
             return humanChoice;
         } else {
-            console.log("Invalid input. Please try again.");
+            console.log("Invalid input. Please try again. ");
             return getHumanChoice(); 
         }
         }
             
-        getHumanChoice();
+        //getHumanChoice();
 
 
     let humanScore = 0;
     let computerScore = 0; 
 
     function playRound(humanChoice, computerChoice){
+        if(humanSelection === computerSelection){
+            console.log("It's a tie! ");
+        } else if((humanSelection === "rock" && computerSelection === "scissors") || (humanSelection === "paper" && computerSelection === "rock") || (humanSelection === "scissors" && computerSelection === "paper")){
+            console.log("You win! " + humanSelection + " beats " + computerSelection);
+        } else {
+            console.log("You lose. "  + computerSelection + " beats " + humanSelection);
+        }
 
+        
     }
+
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerChoice();
+
+    playRound();
 
     </script>
     
