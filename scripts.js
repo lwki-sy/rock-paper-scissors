@@ -62,6 +62,7 @@ function playGame(){
     playRound(humanChoice, computerChoice);
         console.log("Your score: " + humanScore);
         console.log("Computer score: " + computerScore);
+        console.log("****************************");
     }
 }
 
